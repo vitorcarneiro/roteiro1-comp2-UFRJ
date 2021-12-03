@@ -66,45 +66,45 @@ all: $(ALL)
 # Roteiro 1 \/ -------------------------------------------------------------------------------------
 
 aula0101: $(AULA0101OBJS)
-    	$(LD) $(LFLAGS) -o $@ $(AULA0101OBJS)
-        cp -f $@ $@-$(OS)-$(CC)-$(DIALETO)
+    $(LD) $(LFLAGS) -o $@ $(AULA0101OBJS)
+    cp -f $@ $@-$(OS)-$(CC)-$(DIALETO)
 
 .PHONY: clean clean-all clean-objs clean-freebsd clean-linux clean-gcc clean-clang clean-ansi clean-c89 clean-c90 clean-c99 clean-c11
 
 clean:
-        rm -f *.o $(ALL) *.core
+    rm -f *.o $(ALL) *.core
 
 clean-all:
-        rm -f *.o $(ALL) *-FreeBSD-* *-Linux-* *.core
+    rm -f *.o $(ALL) *-FreeBSD-* *-Linux-* *.core
 
 clean-objs:
-        rm -f *.o *.core
+    rm -f *.o *.core
 
 clean-freebsd:
-        rm -f *.o $(ALL) *-FreeBSD-* *.core
+    rm -f *.o $(ALL) *-FreeBSD-* *.core
 
 clean-linux:
-        rm -f *.o $(ALL) *-Linux-* *.core
+    rm -f *.o $(ALL) *-Linux-* *.core
 
 clean-gcc:
-        rm -f *.o $(ALL) *-gcc-* *.core
+    rm -f *.o $(ALL) *-gcc-* *.core
 
 clean-clang:
-        rm -f *.o $(ALL) *-clang-* *.core
+    rm -f *.o $(ALL) *-clang-* *.core
 
 clean-ansi:
-        rm -f *.o $(ALL) *-ansi *.core
+    rm -f *.o $(ALL) *-ansi *.core
 
 clean-c89:
-        rm -f *.o $(ALL) *-c89 *.core
+    rm -f *.o $(ALL) *-c89 *.core
 
 clean-c90:
-        rm -f *.o $(ALL) *-c90 *.core
+    rm -f *.o $(ALL) *-c90 *.core
 
 clean-c99:
-        rm -f *.o $(ALL) *-c99 *.core
+    rm -f *.o $(ALL) *-c99 *.core
 
 clean-c11:
-        rm -f *.o $(ALL) *-c11 *.core
+    rm -f *.o $(ALL) *-c11 *.core
 
 # $RCSfile$
