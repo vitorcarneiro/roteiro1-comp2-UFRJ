@@ -26,9 +26,9 @@ STANDARD = -ansi
 .ifdef C89
 DIALETO = c89
 STANDARD = -std=c89
-.elif C90
-DIALETO = c90
-STANDARD = -std=c90
+#.elif C90
+#DIALETO = c90
+#STANDARD = -std=c90
 .elif C99
 DIALETO = c99
 STANDARD = -std=c99
@@ -62,6 +62,8 @@ ALL = $(EXECS) $(LIBS)
 all: $(ALL)
 
 # Roteiro 1 \/ -------------------------------------------------------------------------------------
+
+aula01: $(AULA01)
 
 aula0101: $(AULA0101OBJS)
 	$(LD) $(LFLAGS) -o $@ $(AULA0101OBJS)
@@ -104,8 +106,8 @@ clean-ansi:
 clean-c89:
 	rm -f *.o $(ALL) *-c89 *.core
 
-clean-c90:
-	rm -f *.o $(ALL) *-c90 *.core
+#clean-c90:
+#	rm -f *.o $(ALL) *-c90 *.core
 
 clean-c99:
 	rm -f *.o $(ALL) *-c99 *.core
