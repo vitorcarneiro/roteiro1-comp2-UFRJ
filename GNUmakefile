@@ -14,7 +14,7 @@ OS = $(shell uname -s)
 
 CC = gcc
 
-ifeq ($(cc), CLANG_VERSION)
+ifeq ($(cc), CLANG)
 CC = clang
 endif
 
