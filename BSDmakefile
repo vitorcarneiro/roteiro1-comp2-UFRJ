@@ -4,44 +4,38 @@
 # EEL270 - Computacao II - Turma 2021/2
 # Prof. Marcelo Luiz Drumond Lanza
 # Autor: <nome completo>
-# Descricao: Arquivo de dependencias para Linux
+# Descricao: Arquivo de dependencias para FreeBSD
 
 # $Author$
 # $Date$
 # $Log$
 
-OS = $(shell uname -s)
+OS = `uname -s`
 
 CC = gcc
 
-ifeq ($(cc), CLANG)
+.ifdef CLANG
 CC = clang
-endif
+.endif
 
 LD = $(CC)
 
 DIALETO = ansi
 STANDARD = -ansi
 
-ifeq ($(dialeto), C89)
+.ifdef C89
 DIALETO = c89
 STANDARD = -std=c89
-endif
-
-ifeq ($(dialeto), C90)
+.elif C90
 DIALETO = c90
 STANDARD = -std=c90
-endif
-
-ifeq ($(dialeto), C99)
+.elif C99
 DIALETO = c99
 STANDARD = -std=c99
-endif
-
-ifeq ($(dialeto), C11)
+.elif C11
 DIALETO = c11
 STANDARD = -std=c11
-endif
+.endif
 
 CFLAGS = -Wall $(STANDARD)
 LFLAGS = -Wall
