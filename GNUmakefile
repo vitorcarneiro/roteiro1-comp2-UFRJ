@@ -59,7 +59,7 @@ ALL = $(EXECS) $(LIBS)
 
 # Regra Implicita
 .c.o:
-$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $<
 
 all: $(ALL)
 
