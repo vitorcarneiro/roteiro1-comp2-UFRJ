@@ -28,7 +28,7 @@ int
 main(int argc, char **argv)
 {
     /* \/ Variables Declaration \/ */
-    unsigned index, spacesForCenterName;
+    unsigned index;
 
     /* \/ Error treatment \/ */
     if (argc != NUM_ARGUMENTS) {
@@ -43,15 +43,14 @@ main(int argc, char **argv)
     }
 
     for (index = 0; argv[1][index] != EOS; index++) {
-        if (argv[1][index] <= ' ' && argv[1][index] >= 'z' ||
-            argv[1][index] >= '!' && argv[1][index] <= '@' ||
-            argv[1][index] >= '[' && argv[1][index] <= '`')
+        if (((argv[1][index] <= ' ') && (argv[1][index] >= 'z')) ||
+            ((argv[1][index] >= '!') && (argv[1][index] <= '@')) ||
+            ((argv[1][index] >= '[') && (argv[1][index] <= '`')))
         {
             printf ("\"First invalid character: %c\"\n", argv[1][index]);
 			printf ("Write just names, no numbers or special characters\n");
 			exit (INVALID_ARGUMENT);
         }
-    
     }
 
     /* \/ main functionality \/ */
@@ -73,8 +72,6 @@ main(int argc, char **argv)
     printf ("\n\n");
 
     return OK;
-
 }
-
 
 /* $RCSfile$ */
