@@ -18,7 +18,6 @@ $Log$
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #define OK                          0
 #define INVALID_NUM_ARGUMENT        1
@@ -54,6 +53,33 @@ main(int argc, char **argv)
     printf ("\rint:%89lu %s\n", sizeof(int), sizeof(int) == 1 ? "byte" : "bytes");
     printf ("\rfloat:%87lu %s\n", sizeof(float), sizeof(float) == 1 ? "byte" : "bytes");
     printf ("\rdouble:%86lu %s\n", sizeof(double), sizeof(double) == 1 ? "byte" : "bytes");
+    
+    printf ("\n");
+
+    for (index = 0; index < 100; index++) {
+        printf ("-");
+    }
+
+    printf ("\n");
+    printf ("\r\nTamanhos dos Modificadores de Sinal\n");
+    printf ("\n");
+
+    printf ("\rsigned:%86lu %s\n", sizeof(signed), sizeof(signed) == 1 ? "byte" : "bytes");
+    printf ("\runsigned:%84lu %s\n", sizeof(unsigned), sizeof(unsigned) == 1 ? "byte" : "bytes");
+    
+    printf ("\n");
+
+    for (index = 0; index < 100; index++) {
+        printf ("-");
+    }
+
+    printf ("\n");
+    printf ("\r\nTamanhos dos Modificadores de Largura\n");
+    printf ("\n");
+
+    printf ("\rshort:%87lu %s\n", sizeof(short), sizeof(short) == 1 ? "byte" : "bytes");
+    printf ("\rlong:%88lu %s\n", sizeof(long), sizeof(long) == 1 ? "byte" : "bytes");
+    printf ("\rlong long:%83lu %s\n", sizeof(long long), sizeof(long long) == 1 ? "byte" : "bytes");
     
     printf ("\n");
     
