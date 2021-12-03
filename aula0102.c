@@ -14,7 +14,6 @@ $Log$
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #define OK                          0
 #define INVALID_NUM_ARGUMENT        1
