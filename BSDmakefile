@@ -42,12 +42,14 @@ LFLAGS = -Wall
 
 # Roteiro 1 \/ -------------------------------------------------------------------------------------
 
-AULA01 = aula0101 aula0102
+AULA01 = aula0101 aula0102 aula0103
 AULA0101OBJS = aula0101.o
 AULA0102OBJS = aula0102.o
+AULA0103OBJS = aula0103.o
 
 EXECS = aula0101\
-		aula0102
+		aula0102\
+		aula0103
 
 LIBS =
 
@@ -67,6 +69,10 @@ aula0101: $(AULA0101OBJS)
 
 aula0102: $(AULA0102OBJS)
 	$(LD) $(LFLAGS) -o $@ $(AULA0102OBJS)
+	cp -f $@ $@-$(OS)-$(CC)-$(DIALETO)
+
+aula0103: $(AULA0103OBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0103OBJS)
 	cp -f $@ $@-$(OS)-$(CC)-$(DIALETO)
 
 .PHONY: clean clean-all clean-objs clean-freebsd clean-linux clean-gcc clean-clang clean-ansi clean-c89 clean-c90 clean-c99 clean-c11
