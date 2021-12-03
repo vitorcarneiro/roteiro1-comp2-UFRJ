@@ -2,10 +2,10 @@
 Universidade Federal do Rio de Janeiro
 Escola Politecnica
 Departamento de Eletronica e de Computacao
-EEL270 - Computacao II - Turma 2021/1
+EEL270 - Computacao II - Turma 2021/2
 Prof. Marcelo Luiz Drumond Lanza
 Autor: Vitor Carneiro Silva de Oliveira
-Descricao: <descrição sucinta dos objetivos do programa>
+Descricao: um programa que receba um nome que possa conter caracteres de espaço e que tenha no máximo 50 caracteres.
 
 $Author$
 $Date$
